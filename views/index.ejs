@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Salary Slip</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Salary Details</h1>
+    <table>
+        <tr>
+            <th>Month</th>
+            <th>Year</th>
+            <th>Base Amount</th>
+            <th>Bonus</th>
+            <th>Tax</th>
+            <th>PF</th>
+            <th>Net Amount</th>
+        </tr>
+        <% data.forEach(salary=> { %>
+            <tr>
+                <td>
+                    <%= salary.month %>
+                </td>
+                <td>
+                    <%= salary.year %>
+                </td>
+                <td>
+                    <%= salary.baseAmount %>
+                </td>
+                <td>
+                    <%= salary.bonus %>
+                </td>
+                <td>
+                    <%= salary.tax %>
+                </td>
+                <td>
+                    <%= salary.pf %>
+                </td>
+                <td>
+                    <%= salary.netAmount %>
+                </td>
+            </tr>
+            <% }) %>
+    </table>
+</body>
+
+</html>
