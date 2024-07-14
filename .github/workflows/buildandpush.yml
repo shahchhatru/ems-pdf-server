@@ -22,6 +22,6 @@ jobs:
               uses: docker/build-push-action@v2
               with:
                   context: .
-                  file: ./pdfserver/Dockerfile
+                  file: ./Dockerfile
                   push: true
                   tags: ${{ secrets.DOCKER_USERNAME }}/pdfserver:latest
