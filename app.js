@@ -4,10 +4,11 @@ const ejs = require('ejs');
 const path = require('path');
 const cors = require('cors');
 const process = require('process')
+const dotenv = require('dotenv');
+dotenv.config();
 const app = express();
 app.use(cors(process.env.CORS));
 app.use(express.json());
-
 
 app.post('/api/v1/generate-pdf', async (req, res) => {
 
